@@ -40,13 +40,34 @@ var appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
 
+var user = {
+	name: 'Arun',
+	age: 25,
+	location: 'Lowell'
+};
+
+var userName = 'My name is Shafiq';
+var userAge = 32;
+
 var template1 = React.createElement(
 	'div',
 	null,
 	React.createElement(
+		'h2',
+		null,
+		user.name
+	),
+	React.createElement(
+		'h2',
+		null,
+		'Age: ',
+		user.age
+	),
+	React.createElement(
 		'h1',
 		null,
-		'What is your first name..!!'
+		'Location:',
+		user.location
 	),
 	React.createElement(
 		'h1',
