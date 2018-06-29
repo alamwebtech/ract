@@ -1,4 +1,4 @@
-console.log('App.js is running..!!')
+console.log("app is runing..!!");
 
 // JSX = Javascript XML
 
@@ -14,6 +14,7 @@ var template = (
 	
     </div>
 			   );
+
 var appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
@@ -24,15 +25,20 @@ var user = {
 	location: 'Lowell'
 }
 
+function getLocation(location){
+	if(location){
+		return <p> Location: {location}</p>
+	}
+}
+
 var userName = 'My name is Shafiq';
 var userAge = 32;
 
 var template1 = (
-<div>
-	<h2>{user.name}</h2>
+    <div>
+	<h2> User Name: {user.name ? user.name : "Unknown Person"}</h2>
 	<h2>Age: {user.age}</h2>
-	<h1>Location:{user.location}</h1>
-	<h1>What is your last name..!!</h1>
+	{getLocation(user.location)}
 	</div>
 );
 

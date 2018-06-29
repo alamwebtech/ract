@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('App.js is running..!!');
+console.log("app is runing..!!");
 
 // JSX = Javascript XML
 
@@ -36,6 +36,7 @@ var template = React.createElement(
 		'Wasuup'
 	)
 );
+
 var appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
@@ -46,6 +47,17 @@ var user = {
 	location: 'Lowell'
 };
 
+function getLocation(location) {
+	if (location) {
+		return React.createElement(
+			'p',
+			null,
+			' Location: ',
+			location
+		);
+	}
+}
+
 var userName = 'My name is Shafiq';
 var userAge = 32;
 
@@ -55,7 +67,8 @@ var template1 = React.createElement(
 	React.createElement(
 		'h2',
 		null,
-		user.name
+		' User Name: ',
+		user.name ? user.name : "Unknown Person"
 	),
 	React.createElement(
 		'h2',
@@ -63,17 +76,7 @@ var template1 = React.createElement(
 		'Age: ',
 		user.age
 	),
-	React.createElement(
-		'h1',
-		null,
-		'Location:',
-		user.location
-	),
-	React.createElement(
-		'h1',
-		null,
-		'What is your last name..!!'
-	)
+	getLocation(user.location)
 );
 
 var myAppRoot = document.getElementById('myApp');

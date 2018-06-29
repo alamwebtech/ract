@@ -1,0 +1,89 @@
+ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
+$ npm install -g babel-cli@6.24.1
+C:\Users\ferar\AppData\Roaming\npm\babel -> C:\Users\ferar\AppData\Roaming\npm\n              ode_modules\babel-cli\bin\babel.js
+C:\Users\ferar\AppData\Roaming\npm\babel-doctor -> C:\Users\ferar\AppData\Roamin              g\npm\node_modules\babel-cli\bin\babel-doctor.js
+C:\Users\ferar\AppData\Roaming\npm\babel-node -> C:\Users\ferar\AppData\Roaming\              npm\node_modules\babel-cli\bin\babel-node.js
+C:\Users\ferar\AppData\Roaming\npm\babel-external-helpers -> C:\Users\ferar\AppD              ata\Roaming\npm\node_modules\babel-cli\bin\babel-external-helpers.js
+C:\Users\ferar\AppData\Roaming\npm
+`-- babel-cli@6.24.1
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\ba              bel-cli\node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@              1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"}              )
+
+ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
+$ babel --help
+
+  Usage: babel [options] <files ...>
+
+  Options:
+
+    -f, --filename [filename]            filename to use when reading from stdin               - this will be used in source-maps, errors etc
+    --retain-lines                       retain line numbers - will result in re              ally ugly code
+    --no-highlight-code                  enable/disable ANSI syntax highlighting               of code frames (on by default)
+    --presets [list]
+    --plugins [list]
+    --ignore [list]                      list of glob paths to **not** compile
+    --only [list]                        list of glob paths to **only** compile
+    --no-comments                        write comments to generated output (tru              e by default)
+    --compact [booleanString]            do not include superfluous whitespace c              haracters and line terminators [true|false|auto]
+    --minified                           save as much bytes when printing [true|              false]
+    -s, --source-maps [booleanString]    [true|false|inline]
+    --source-map-target [string]         set `file` on returned source map
+    --source-file-name [string]          set `sources[0]` on returned source map
+    --source-root [filename]             the root from which all sources are rel              ative
+    --no-babelrc                         Whether or not to look up .babelrc and               .babelignore files
+    --source-type [string]
+    --auxiliary-comment-before [string]  print a comment before any injected non              -user code
+    --auxiliary-comment-after [string]   print a comment after any injected non-              user code
+    --module-root [filename]             optional prefix for the AMD module form              atter that will be prepend to the filename on module definitions
+    -M, --module-ids                     insert an explicit id for modules
+    --module-id [string]                 specify a custom name for module ids
+    --parser-opts [string]               Options to pass into the parser, or to               change parsers (parserOpts.parser)
+    --generator-opts [string]            Options to pass into the generator, or               to change generators (generatorOpts.generator)
+    -x, --extensions [extensions]        List of extensions to compile when a di              rectory has been input [.es6,.js,.es,.jsx]
+    -w, --watch                          Recompile files on changes
+    --skip-initial-build                 Do not compile files before watching
+    -o, --out-file [out]                 Compile all input files into a single f              ile
+    -d, --out-dir [out]                  Compile an input directory of modules i              nto an output directory
+    -D, --copy-files                     When compiling a directory copy over no              n-compilable files
+    -q, --quiet                          Don't log anything
+    -V, --version                        output the version number
+    -h, --help                           output usage information
+
+ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
+$ yarn init
+yarn init v1.5.1
+warning ..\..\..\package.json: No license field
+question name (indecission-app):
+question version (1.0.0):
+question description:
+question entry point (index.js):
+question repository url (https://github.com/alamwebtech/ract.git):
+question author (msalam <ms17alam@gmail.com>):
+question license (MIT):
+question private:
+success Saved package.json
+Done in 9.83s.
+
+ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
+$ yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
+yarn add v1.5.1
+warning ..\..\..\package.json: No license field
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved 0 new dependencies.
+Done in 40.09s.
+
+ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
+$ babel src/app.js --out-file=public/scripts/app.js --presets=env, react
+react doesn't exist
+
+ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
+$ babel src/app.js --out-file=public/scripts/app.js --presets=env,react
+
+ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
+$ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+change src/app.js
+change src/app.js
