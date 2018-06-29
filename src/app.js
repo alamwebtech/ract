@@ -3,7 +3,7 @@ console.log("app is runing..!!");
 // JSX = Javascript XML
 
 
-var template = (	
+const template = (	
 	<div>
 	<h1> Does this change..! </h1> <p>Adding new Items</p>
 	<ol>
@@ -15,26 +15,23 @@ var template = (
     </div>
 			   );
 
-var appRoot = document.getElementById('app');
+const appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
 
-var user = {
+const user = {
 	name: 'Arun', 
 	age: 25,
 	location: 'Lowell'
 }
 
 function getLocation(location){
-	if(location){
-		return <p> Location: {location}</p>
-	}
+	return <p> Location: {user.location ? user.location : "Location Unknown..!!"}</p>;
 }
 
-var userName = 'My name is Shafiq';
-var userAge = 32;
 
-var template1 = (
+
+const template1 = (
     <div>
 	<h2> User Name: {user.name ? user.name : "Unknown Person"}</h2>
 	<h2>Age: {user.age}</h2>
@@ -42,6 +39,6 @@ var template1 = (
 	</div>
 );
 
-var myAppRoot = document.getElementById('myApp');
+const myAppRoot = document.getElementById('myApp');
 
 ReactDOM.render(template1,myAppRoot);
