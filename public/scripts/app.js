@@ -15,3 +15,9 @@ var makeSquare = function makeSquare(y) {
 };
 
 console.log(makeSquare(10));
+
+var getFirstName = function getFirstName(fullName) {
+	return fullName.split(' ')[0];
+};
+
+console.log(getFirstName("Arun Varunn"));
