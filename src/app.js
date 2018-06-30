@@ -1,44 +1,22 @@
-console.log("app is runing..!!");
 
 // JSX = Javascript XML
 
 
 const template = (	
 	<div>
-	<h1> Does this change..! </h1> <p>Adding new Items</p>
+	<h1> Indecission App</h1> <p>Here is your options</p>
 	<ol>
-	</ol>
-	<li>Hello</li>
-	<li>Hi</li>
-	<li>Wasuup</li>
 	
+	<li>Item One</li>
+	<li>Item Two</li>
+	</ol>
+	<form>
+	
+	</form>
+	 <input type="text"  name="option"/>
+	 <button>Add Option</button>
     </div>
 			   );
-
 const appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
-
-const user = {
-	name: 'Arun', 
-	age: 25,
-	location: 'Lowell'
-}
-
-function getLocation(location){
-	return <p> Location: {user.location ? user.location : "Location Unknown..!!"}</p>;
-}
-
-
-
-const template1 = (
-    <div>
-	<h2> User Name: {user.name ? user.name : "Unknown Person"}</h2>
-	<h2>Age: {user.age}</h2>
-	{getLocation(user.location)}
-	</div>
-);
-
-const myAppRoot = document.getElementById('myApp');
-
-ReactDOM.render(template1,myAppRoot);
