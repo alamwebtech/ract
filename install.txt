@@ -76,9 +76,6 @@ warning ..\..\..\package.json: No license field
 success Saved 0 new dependencies.
 Done in 40.09s.
 
-ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
-$ babel src/app.js --out-file=public/scripts/app.js --presets=env, react
-react doesn't exist
 
 ferar@DESKTOP-7LLPP5P MINGW64 ~/desktop/projects/indecission-app (app)
 $ babel src/app.js --out-file=public/scripts/app.js --presets=env,react
