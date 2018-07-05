@@ -1,3 +1,6 @@
+
+
+
 class IndecissionApp extends  React.Component{
 	render(){
 		
@@ -49,8 +52,14 @@ class Action extends React.Component {
 
 class Options extends React.Component {
 	
+	constructor(props){
+		super(props);
+		this.handleRemoveAll = this.handleRemoveAll.bind(this);
+	}
+	
+	
 	handleRemoveAll(){
-		alert('HANDLE REMOVE ALL');
+		console.log(this.props.options);
 	}
 	
 	render(){
